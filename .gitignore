@@ -6,6 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+# Idea
+.idea/
+
+# Image Files
+static/image/*
+!./static/image/logo.jpg
+
 # Distribution / packaging
 .Python
 build/

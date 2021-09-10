@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Test app</title>
+    <link rel="icon" href="{{static('/image/logo.jpg')}}" type="image/x-icon"/>
+    <link href="{{static('/main.css')}}" rel="stylesheet">
+</head>
+<body>
+<div>
+    <h1>Веб сервис по определению количества пикселей определенного цвета в изображении</h1>
+    <div id="root">
+        <div class="form">
+            <form class="form__input" action="/" method="POST" enctype="multipart/form-data">
+                <input class="form__image" type="file" id="image" name="image" accept="image/png, image/jpeg">
+                <p/>
+                <input class="form__button" type="submit" name="submit" value="Загрузить файл" />
+            </form>
+        </div>
+        <div class="context">
+            <div class="image">
+                <img class="img" src="static/image/{{key_cookie}}.jpg">
+            </div>
+            <div class="data">
+                <p>Количество белых пикселей: {{white}}</p>
+                <p>Количество черных пикселей: {{black}}</p>
+                <p>Количество пикселей цвета <span style="border: 4px solid {{color_hex}}">{{color_hex}}</span>: {{color}}</p>
+                <div class="form">
+                    <form class="form__input" action="/" method="GET" enctype="text/plain">
+                        <p>Выберите цвет:
+                            <input class="form__color" type="color" id="color" name="color" value="{{color_hex}}">
+                            <p/>
+                            <input class="form__button" type="submit" value="Посчитать">
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

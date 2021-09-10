@@ -1,0 +1,81 @@
+.icon {
+        background: url("image/logo.jpg");
+        height: 20px;
+        width: 20px;
+        display: block;
+        /* Other styles here */
+    }
+html {
+    font-family: Verdana, "sans-serif";
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(#f9de59, #f98365) no-repeat;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    text-shadow: 0 2px 5px rgba(150, 150, 150, 0.8);
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    width: 70%;
+}
+
+.form__button {
+    background-color: white;
+    cursor: pointer;
+}
+
+.form__input, .form__button {
+    box-sizing: border-box;
+    width: 100%;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.1);
+}
+
+.form__input:focus, .form__button:hover {
+    -webkit-transition: 0.3s;
+    -moz-transition: 0.3s;
+    transition: 0.3s;
+    -webkit-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+    -moz-box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.5);
+}
+
+.context {
+    padding: 20px
+}
+
+.context .image {
+    float: left;
+    width: 45%;
+}
+
+.context .image .img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.context .data {
+    float: right;
+    width: 50%;
+}
